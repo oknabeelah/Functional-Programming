@@ -77,3 +77,37 @@ is-x-and-y-true? true false
 (convert-temperature 0 "C" "F")
 
 ; currently cases -> k, how to get k -> cases using the same func
+
+;;;; temperature conversion solution
+(defn celsius->fahrenheit [t] (+ (/ (* t 9) 5) 32))
+(defn fahrenheit->celsius [t] (/ (* (- t 32) 5) 9))
+(defn celsius->reamur [t] (* t 0.8))
+(defn reamur->celsius [t] (* t 1.25))
+
+(celsius->fahrenheit 100)
+(fahrenheit->celsius 212)
+(celsius->reamur 25)
+(reamur->celsius 20)
+
+(defn convert-temp [temp from to]
+  (to (from temp)))
+
+(convert-temp 212 fahrenheit->celsius celsius->reamur)
+
+;;;; final solution
+(defn convert-temp [temp from to]
+  (to (from temp)))
+
+(let [temperature 100
+      from "celsius"
+      to "fahrenheit"]
+
+  (convert-temp
+   temperature
+   (cond
+     (= from "fahrenheit") #(* (+ % 459.67) (/ 5 9))
+     (= from "celsius") #(+ % 273.15)
+     (= from "newton") #(+ (* % (/ 100 33)) 273.15))
+   (cond
+     (= to "fahrenheit") #(- (* % (/ 9 5)) 459.67)
+     (= to "celsius") #(- % 273.15))))

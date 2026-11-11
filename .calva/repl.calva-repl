@@ -1,0 +1,1572 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+(when-let [requires (resolve 'clojure.main/repl-requires)] (clojure.core/apply clojure.core/require @requires))
+clj꞉user꞉> 
+(println data-map)
+clj꞉user꞉> 
+(println (first data-map))
+clj꞉user꞉> 
+(when-let [requires (resolve 'clojure.main/repl-requires)] (clojure.core/apply clojure.core/require @requires))
+clj꞉user꞉> 
+(= true (is-even? 0))
+clj꞉user꞉> 
+(= true (is-even? 0))
+clj꞉user꞉> 
+(= true (is-even? 0))
+clj꞉user꞉> 
+(= true (is-even? 0))
+clj꞉user꞉> 
+(defn is-even? [n]
+  (if (= n 0)
+    true
+    (= false (is-even? (dec n)))
+    )
+  )
+clj꞉user꞉> 
+(= true (is-even? 0))
+clj꞉user꞉> 
+(= false (is-even? 1))
+clj꞉user꞉> 
+(defn is-even-bigint? [n]
+  (loop [n   n
+         acc true]
+    (if (= n 0)
+      true
+      (= false (dec n) (not acc)))
+    )
+  )
+clj꞉user꞉> 
+(= false (is-even-bigint? 100003N))
+clj꞉user꞉> 
+(defn recursive-reverse [coll]
+  reverse coll
+  )
+clj꞉user꞉> 
+(= '(1) (recursive-reverse [1]))
+clj꞉user꞉> 
+(= '(5 4 3 2 1) (recursive-reverse [1 2 3 4 5]))
+clj꞉user꞉> 
+(defn recursive-reverse [coll]
+  ;; reverse coll
+  (loop [r (rest coll)
+        acc (conj () (first coll)) ]
+     (if (= (count r) 0)
+       acc
+       (recur (rest r) (conj acc (first r)))
+       )
+    )
+  )
+clj꞉user꞉> 
+(= '(1) (recursive-reverse [1]))
+clj꞉user꞉> 
+(= '(5 4 3 2 1) (recursive-reverse [1 2 3 4 5]))
+clj꞉user꞉> 
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+clj꞉user꞉> 
+(= 1 (factorial 1))
+(= 1 (factorial 1))
+(= 1 (factorial 1))
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(= 1 (factorial 1))
+clj꞉user꞉> 
+(when-let [requires (resolve 'clojure.main/repl-requires)] (clojure.core/apply clojure.core/require @requires))
+clj꞉user꞉> 
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+clj꞉user꞉> 
+(= 1 (factorial 1))
+(= '(5 4 3 2 1) (recursive-reverse [1 2 3 4 5]))
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= n 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+clj꞉user꞉> 
+(when-let [requires (resolve 'clojure.main/repl-requires)] (clojure.core/apply clojure.core/require @requires))
+clj꞉user꞉> 
+(defn factorial [n]
+  (loop [r n
+         acc 1]
+    (if (= r 0)
+      acc
+      (recur (dec r) (* acc r))
+      )
+    )
+  )
+clj꞉user꞉> 
+(= 1 (factorial 1))
+clj꞉user꞉> 
+(= 2 (factorial 2))
+clj꞉user꞉> 
+(= 6 (factorial 3))
+clj꞉user꞉> 
+(= 24 (factorial 4))
+clj꞉user꞉> 
+(< 1000000000000000000000000N (factorial 1000N))
+clj꞉user꞉> 
+(defn findmin [v]
+    (first (sort v)) ;; sort the vector and return the first element
+  )
+clj꞉user꞉> 
+(findmin [1 2 3 4 5])
+clj꞉user꞉> 
+(defn findsum [v]
+  (reduce + v) ;; reduce the vector by summing all elements
+  )
+clj꞉user꞉> 
+(findsum [1 2 3 4 5])
+clj꞉user꞉> 
+(defn palindrome? [v]
+  (= v (reverse v)) ;; check if the vector is equal to its reverse
+  )
+clj꞉user꞉> 
+(palindrome? [1 2 3 4 3 2 1])
+clj꞉user꞉> 
+(defn find-min [v]
+  (letfn [(min? [v m]
+            (if (empty? v)
+              m
+              (if (< (first v) m)
+                (recur (rest v) (first v))
+                (recur (rest v) m))))]
+    (min? v (first v))))
+clj꞉user꞉> 
+(find-min [2 4 3 5])
+clj꞉user꞉> 
+(find-sum [1 2 3 4 5])
+clj꞉user꞉> 
+(defn find-sum [v]
+  (loop [sum 0 vals v]
+    (if (empty? vals)
+      sum
+      (recur (+ (first vals) sum) (rest vals)))))
+clj꞉user꞉> 
+(find-sum [1 2 3 4 5])
+clj꞉user꞉> 
+(defn palindrome? [v]
+  (loop [vals v pallie true]
+    (cond
+      (empty? vals) pallie
+      (= 1 (count vals)) pallie
+      (= false pallie) pallie
+      :else (recur
+             (subvec vals 1 (- (count vals) 1))
+             (= (first vals) (last vals))))))
+clj꞉user꞉> 
+(palindrome? [1 2 3 4 3 2 1])
+clj꞉user꞉> 
+(let [row (- (quot val 10) 1) 
+      col (- (mod val 10) 1) ])
+clj꞉user꞉> 
+(let [treasure-map
+      [[34 21 32 41 25]
+       [14 42 43 14 31]
+       [54 45 52 42 23]
+       [33 15 51 31 35]
+       [21 52 33 13 23] ]
+      start 11 ])
+clj꞉user꞉> 
+(let [treasure-map
+      [[34 21 32 41 25]
+       [14 42 43 14 31]
+       [54 45 52 42 23]
+       [33 15 51 31 35]
+       [21 52 33 13 23] ]
+      start 11 ])
+clj꞉user꞉> 
+(loop [cell start]
+   (let [row (- (quot cell 10) 1)
+         col (- (rem cell 10) 1)
+         val ((treasure-map row) col) ]
+
+     (println (str row " " col " " val))
+     (if (= val cell)
+       val
+       (recur val)
+       )
+     )
+  )
+clj꞉user꞉> 
+(let [treasure-map
+      [[34 21 32 41 25]
+       [14 42 43 14 31]
+       [54 45 52 42 23]
+       [33 15 51 31 35]
+       [21 52 33 13 23] ]
+      start 11 ]
+
+(loop [cell start]
+   (let [row (- (quot cell 10) 1)
+         col (- (rem cell 10) 1)
+         val ((treasure-map row) col) ]
+
+     (println (str row " " col " " val))
+     (if (= val cell)
+       val
+       (recur val)
+       )
+     )
+  ) )
+clj꞉user꞉> 
+(let [treasure-map
+      [[34 21 32 41 25]
+       [14 42 43 14 31]
+       [54 45 52 42 23]
+       [33 15 51 31 35]
+       [21 52 33 13 23] ]
+      start 11 ]
+
+(loop [cell start]
+   (let [row (- (quot cell 10) 1)
+         col (- (rem cell 10) 1)
+         val ((treasure-map row) col) ]
+
+     (println ("row " row " and col " col " hold the value: " val))
+     (if (= val cell)
+       val
+       (recur val)
+       )
+     )
+  ) )
+clj꞉user꞉> 
+(let [treasure-map
+      [[34 21 32 41 25]
+       [14 42 43 14 31]
+       [54 45 52 42 23]
+       [33 15 51 31 35]
+       [21 52 33 13 23] ]
+      start 11 ]
+
+(loop [cell start]
+   (let [row (- (quot cell 10) 1)
+         col (- (rem cell 10) 1)
+         val ((treasure-map row) col) ]
+
+     (println ("row \"" row "\" and col \"" col "\" hold the value: \"" val "\""))
+     (if (= val cell)
+       val
+       (recur val)
+       )
+     )
+  ) )
+clj꞉user꞉> 
+(let [treasure-map
+      [[34 21 32 41 25]
+       [14 42 43 14 31]
+       [54 45 52 42 23]
+       [33 15 51 31 35]
+       [21 52 33 13 23] ]
+      start 11 ]
+
+(loop [cell start]
+   (let [row (- (quot cell 10) 1)
+         col (- (rem cell 10) 1)
+         val ((treasure-map row) col) ]
+
+     (prn (str row " " col " " val))
+     (if (= val cell)
+       val
+       (recur val)
+       )
+     )
+  ) )
+clj꞉user꞉> 
+(let [treasure-map
+      [[34 21 32 41 25]
+       [14 42 43 14 31]
+       [54 45 52 42 23]
+       [33 15 51 31 35]
+       [21 52 33 13 23] ]
+      start 11 ]
+
+(loop [cell start]
+   (let [row (- (quot cell 10) 1)
+         col (- (rem cell 10) 1)
+         val ((treasure-map row) col) ]
+
+     (prn (str row " row " col " " val))
+     (if (= val cell)
+       val
+       (recur val)
+       )
+     )
+  ) )
+clj꞉user꞉> 
+(defn count-words [phrase]
+      (frequencies phrase)
+  )
+clj꞉user꞉> 
+(count-words [:olly :in :olly :free :come])
+clj꞉user꞉> 
+(defn count-words [phrase]
+  (loop [remaining phrase
+         counts {} ]
+    (if (empty? remaining)
+      counts
+      (let [word (first remaining)
+            current-count (get counts word 0) ]
+        (recur (rest remaining)
+               (assoc counts word (inc current-count))
+            ) )
+      )
+    )
+  )
+clj꞉user꞉> 
+(count-words [:olly :in :olly :free :come])
+clj꞉user꞉> 
+(let [timetable {
+        :group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                 {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                 {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2} ]
+        :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]
+      } ]
+  )
+clj꞉user꞉> 
+(let [timetable {
+        :group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                 {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                 {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2} ]
+        :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]
+      } ]
+  (println "Whole data structure: " timetable)
+  
+  
+  )
+clj꞉user꞉> 
+(let [timetable {
+        :group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                 {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                 {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2} ]
+        :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]
+      } ]
+  (println "Whole data structure: ")
+  
+  )
+clj꞉user꞉> 
+(println "Whole data structure: ")
+clj꞉user꞉> 
+(let [timetable {
+        :group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                 {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                 {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2} ]
+        :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]
+      } ]  
+  )
+clj꞉user꞉> 
+(println ("Whole data structure: "))
+clj꞉user꞉> 
+(str "Whole data structure: ")
+clj꞉user꞉> 
+(println (str "Whole data structure: "))
+clj꞉user꞉> 
+(str "Whole data structure: ")
+clj꞉user꞉> 
+(str timetable)
+clj꞉user꞉> 
+(let [timetable {
+        :group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                 {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                 {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2} ]
+        :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]
+      } ] 
+ (str timetable) 
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  (str timetable) ;; The whole data structure
+  (str (first timetable)) ;; The first row of data
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  (str timetable) ;; The whole data structure
+  (str (first (first timetable))) ;; The first row of data
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  (pprint timetable) ;; The whole data structure
+  (str (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  (pprint timetable) ;; The whole data structure
+  ;(str (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (pprint timetable) ;; The whole data structure
+
+  ;(pprint (first (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (pprint timetable) ;; The whole data structure
+
+  ;(pprint (first (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(pprint (first (first (first timetable))) ;; The first row of data
+
+
+)
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (pprint timetable) ;; The whole data structure
+
+  (pprint (first (first (first timetable)))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (pprint timetable) ;; The whole data structure
+
+  (pprint (first (first (first timetable)))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (p/pprint timetable) ;; The whole data structure
+
+  ;(p/pprint (first (first (first timetable)))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (p/pprint timetable) ;; The whole data structure
+
+  ;(p/pprint (first (first (first timetable)))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(println "x")
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (println timetable) ;; The whole data structure
+
+  ;(p/pprint (first (first (first timetable)))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (println timetable) ;; The whole data structure
+
+  (println (first (first (first timetable)))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (println timetable) ;; The whole data structure
+
+  (println (first timetable)) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(println (first (first timetable)) ;; The first row of data
+
+
+)
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (println timetable) ;; The whole data structure
+
+  (println (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (println timetable) ;; The whole data structure
+
+  (println (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  (println timetable) ;; The whole data structure
+
+  (println (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  ;(println timetable) ;; The whole data structure
+
+  (println (first (first timetable))) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+  
+
+  ;(println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0] )) ;; The first row of data
+
+
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  ;(println timetable) ;; The whole data structure
+
+  ;(println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (get-in timetable [(first (first timetable)) rest])) ;; All except the first
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  ;(println timetable) ;; The whole data structure
+
+  ;(println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (get-in timetable [(first (first timetable)) 1])) ;; All except the first
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  ;(println timetable) ;; The whole data structure
+
+  ;(println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (get-in timetable [(first (first timetable)) all])) ;; All except the first
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  ;(println timetable) ;; The whole data structure
+
+  ;(println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; All except the first
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (rest (first (first timetable)) timetable)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(println (rest (first (first timetable) timetable)) ;; All except the first (in group1)
+
+;; All rows in which the class is taught in room 310
+;; All rows in which the class is not taught in room 310
+;; Classes which are one hour long
+;; Classes on the third floor of building nine
+;; Classes which are not titled Fundamentals of something
+)
+clj꞉user꞉> 
+(println (rest (first (first timetable))) ;; All except the first (in group1)
+
+;; All rows in which the class is taught in room 310
+;; All rows in which the class is not taught in room 310
+;; Classes which are one hour long
+;; Classes on the third floor of building nine
+;; Classes which are not titled Fundamentals of something
+)
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (rest (first (first timetable)))) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(println (subvec ((first (first timetable)) timetable) 1) ;; All except the first (in group1)
+
+;; All rows in which the class is taught in room 310
+;; All rows in which the class is not taught in room 310
+;; Classes which are one hour long
+;; Classes on the third floor of building nine
+;; Classes which are not titled Fundamentals of something
+)
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+  (let [groups (keys timetable)]
+    (println groups)) ;; The keys of the map
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+  (let [groups (keys timetable)]
+    (println groups) ;; The keys of the map
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+  (println (subvec ((group 0) timetable) 1)) ;; All except the first (in group1)
+  
+    
+    )
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
+(let [timetable {:group1 [{:room "9310" :subject "Fundamentals of Programming" :starts "10:00" :duration 1}
+                          {:room "521" :subject "Programming for Beginners" :starts "10:00" :duration 1}
+                          {:room "9306" :subject "Networking and Server Administration" :starts "14:00" :duration 2}]
+                 :group2 [{:room "310" :subject "Fundamentals of Programming" :starts "15:00" :duration 1}]}]
+
+
+  (println timetable) ;; The whole data structure
+  (let [groups (keys timetable)]
+    (println groups) ;; The keys of the map
+
+  (println (get-in timetable [(first (first timetable)) 0])) ;; The first row of data
+
+  (println (subvec ((first (first timetable)) timetable) 1)) ;; All except the first (in group1)
+  (println (subvec ((groups 0) timetable) 1)) ;; All except the first (in group1)
+  
+    
+    )
+  ;; All rows in which the class is taught in room 310
+  ;; All rows in which the class is not taught in room 310
+  ;; Classes which are one hour long
+  ;; Classes on the third floor of building nine
+  ;; Classes which are not titled Fundamentals of something
+  )
+clj꞉user꞉> 
